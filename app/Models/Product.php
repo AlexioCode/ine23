@@ -31,4 +31,7 @@ class Product extends Model
         return ($sProductStart != null && $sProductEnd != null && $sDiscountPercent > 0 && 
             $sProductStart <= $sNow && $sProductEnd >= $sNow);
     }
+    public function Company() {
+        
+    }   
 }
