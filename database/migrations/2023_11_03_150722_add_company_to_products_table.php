@@ -26,4 +26,5 @@ return new class extends Migration
             $table->dropColumn('company_id');
      });
     }
+    // php artisan migrate:rollback no funciona
 };

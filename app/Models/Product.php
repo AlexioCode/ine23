@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
@@ -31,7 +32,8 @@ class Product extends Model
         return ($sProductStart != null && $sProductEnd != null && $sDiscountPercent > 0 && 
             $sProductStart <= $sNow && $sProductEnd >= $sNow);
     }
-    public function Company() {
-        
-    }   
+    public function Company(): BelongsTo
+    {
+        return $this->belongsTo(Company::class);
+    }
 }
