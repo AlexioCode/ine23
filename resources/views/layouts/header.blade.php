@@ -13,5 +13,5 @@
           </ul>
         </div>
         <a class="nav-link mx-3" href="#">Autenticación</a>
-        <a href="#"> <img src="ico/carrito.png" class="mx-3" alt="Carrito" width="20%"> </a>
+        <a href="#"> <img src="/ico/carrito.png" class="mx-3" alt="Carrito" width="20%"> </a>
 </header>
