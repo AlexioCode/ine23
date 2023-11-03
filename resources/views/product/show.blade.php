@@ -9,11 +9,11 @@ use App\Models\Company;
 
 <!-- LAYOUT: CENTER -->
 
-<div class="col-sm-2 card card-body border-0">
+<div class="card card-body">
     <img src="{{ $product->imgUrl }}" alt="{{ $product->name }}">
     <h3>{{ $product->name }}</h3>
     <p>Precio: ${{ number_format($product->price, 2) }}</p>
-    <p>Nombre de la empresa: {{ $product->Company() }}</p>
+    date_format(discountStart_at,"%Y-%m-%d")
     <p>Nombre de la empresa: {{ $product->Company->name }}</p>
 </div>
 

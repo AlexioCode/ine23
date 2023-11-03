@@ -12,7 +12,9 @@
       <div class="row">
         @foreach ($aProduct_offering as $product)
         <div class="col-sm-2 card card-body border-0">
-          <img src="{{ $product->imgUrl }}" alt="{{ $product->name }}">
+          <a href="product/{{ $product->id }}">
+            <img src="{{ $product->imgUrl }}" class="img-fluid" alt="{{ $product->name }}">
+          </a>
           <h3>{{ $product->name }}</h3>
           <p>Precio: ${{ number_format($product->price, 2) }}</p>
         </div>
@@ -51,7 +53,9 @@
       <div class="row">
         @foreach ($aProduct_new as $product)
         <div class="col-sm-2 card card-body border-0">
-          <img src="{{ $product->imgUrl }}" alt="{{ $product->name }}">
+          <a href="product/{{ $product->id }}">
+              <img src="{{ $product->imgUrl }}" class="img-fluid" alt="{{ $product->name }}">
+          </a>
           <h3>{{ $product->name }}</h3>
           <p>Precio: ${{ number_format($product->price, 2) }}</p>
           @if($product->HasDiscount())
@@ -79,7 +83,6 @@
             </div>
 -->
       </div>
-
     </div>
     @endsection
 
