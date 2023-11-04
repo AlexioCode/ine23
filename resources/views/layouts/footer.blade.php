@@ -35,7 +35,7 @@
   <ul class="nav flex-column">
     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Atención al cliente</a></li>
     <li class="nav-item mb-2"> <a href="#" class="nav-link p-0 text-muted">Twitter
-      <img src="ico/twitter.png" class="img-thumbnail" alt="Twitter"> </a>
+      <img src="/ico/twitter.png" class="img-thumbnail" alt="Twitter"> </a>
     </li>
     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">YouTube</a></li>
