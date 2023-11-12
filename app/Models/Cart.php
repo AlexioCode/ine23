@@ -24,7 +24,7 @@ class Cart extends Model
             $this->htItem[$product->id]['quantity'] += 1;
         } else {
             $this->htItem[$product->id] = array(
-                'id' => $product->id, 'name' => $product->name, 'imgUrl' => $product->imgUrl,
+                'product->id' => $product->id, 'name' => $product->name, 'imgUrl' => $product->imgUrl,
                 'price' => $product->price, 'quantity' => 1);
         }
         $this->iTotalItems ++;
