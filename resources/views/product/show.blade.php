@@ -17,7 +17,7 @@ use App\Models\Company;
     <h3>{{ $product->name }}</h3>
     <p>Precio: ${{ number_format($product->price, 2) }}</p>
     <p>Nombre de la empresa: {{ $product->Company->name }}</p>
+    <a href="{{ route('cart.add', $product->id) }}" class="btn btn-primary">Añadir al carro</a>
 </div>
-
 
 @endsection
