@@ -13,11 +13,11 @@
           </ul>
         </div>
         <a class="nav-link mx-3" href="#">Autenticación</a>
-        <a href="#">
+        <a href="{{ route('cart.show') }}"> // ESTO ESTÁ MAL
             <img src="/ico/carrito.png" class="mx-3" alt="Carrito" width="20%">
-        </a>
+          </a>
         @php 
-          if(session()->get('cart') && session()->get('cart')->iTotalItems > 0)
+          if(session()->get('cart') && session()->get('cart', 0)->iTotalItems > 0)
             echo session()->get('cart')->iTotalItems;
         @endphp
         
