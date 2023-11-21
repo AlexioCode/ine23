@@ -32,8 +32,5 @@ class Product extends Model
         return ($sProductStart != null && $sProductEnd != null && $sDiscountPercent > 0 && 
             $sProductStart <= $sNow && $sProductEnd >= $sNow);
     }
-    public function Company(): BelongsTo
-    {
-        return $this->belongsTo(Company::class);
-    }
+    public function Company(): BelongsTo { return $this->belongsTo(Company::class); }
 }

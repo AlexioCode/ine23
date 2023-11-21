@@ -19,7 +19,5 @@
         @endphp
         <a href="{{ route('cart.show') }}">
             <img src="/ico/carrito.png" class="mx-3" alt="Carrito" width="20%">
-          </a>
-
-        
+          </a> 
 </header>

@@ -19,9 +19,9 @@ class Cart extends Model {
         }
     }
     public function Add(Product $product) {
-        if (array_key_exists($product->id, $this->htItem)) {
+        if (array_key_exists($product->id, $this->htItem))
             $this->htItem[$product->id]['quantity'] += 1;
-        } else {
+        else {
             $this->htItem[$product->id] = array(
                 'id' => $product->id, 'name' => $product->name, 'imgUrl' => $product->imgUrl,
                 'price' => $product->price, 'quantity' => 1

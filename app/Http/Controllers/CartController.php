@@ -16,14 +16,12 @@ class CartController extends Controller
         $request->session()->put('cart', $cart);
         return view ('cart.show', compact(['cart']));
     }
-
     public function remove (Product $product, Request $request) {
         $cart = $request->session()->get('cart');
         $cart->remove($product);
         $request->session()->put('cart', $cart);
         return view ('cart.show', compact(['cart']));
     }
-
     public function removeAll (Product $product, Request $request) {
         $cart = $request->session()->get('cart');
         $cart->removeAll($product);

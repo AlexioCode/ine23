@@ -15,10 +15,7 @@ class ProductController extends Controller
         return view('welcome',
         compact('aProduct_offering', 'aProduct_new'));
     }
-    public function show(Product $product): View
-    {
-        return view('product.show', compact('product'));
-    }
+    public function show(Product $product): View { return view('product.show', compact('product')); }
     public function addToCart(Product $product, Request $request) {
         $cart = new Cart($request->session()->get('cart', null));
         $cart->Add($product);
