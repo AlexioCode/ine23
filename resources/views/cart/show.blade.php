@@ -6,19 +6,32 @@ use App\Models\Company;
 
 
 -->
-
-// APARTADO 2. CREACION DE LA VISTA (INCOMPLETO)
 @extends('templates.master')
 
 @section('content-center')
 
-<!-- LAYOUT: CENTER -->
+@isset($cart)
+    @if ($cart ->iTotalItems > 0)
+        <h3>Productos: {{$cart->iTotalItems}} Total: {{$cart->dTotalPrice}} </h3>
+    @else
+        <h3>No hay productos en el carrito.</h3>
+    @endif
 <div class="col-sm-2 card card-body border-0">
-    <img src="/{{ $product->imgUrl }}" alt="{{ $product->name }}" class="img-fluid">
-    <h3>{{ $product->name }}</h3>
-    <p>Precio: ${{ number_format($product->price, 2) }}</p>
-    <p>Nombre de la empresa: {{ $product->Company->name }}</p>
-    <a href="{{ route('cart.add', $product->id) }}" class="btn btn-primary">Añadir al carro</a>
+    @foreach ($cart->htItem as $cartItem)
+    <img src="/{{ $cartItem['imgUrl'] }}" class="img-fluid" alt="{{ $cartItem['name'] }}">
+    <h3>{{ $cartItem['name'] }}</h3>
+    <p>Precio: ${{ number_format($cartItem['price'], 2) }}</p>
+    <div>
+    <a type="button" class="btn btn-light" href="{{ route('cart.operation', [ 'operation' => 'remove', 'product' => $cartItem['id']]) }}">-</a>
+    @php echo $cart->htItem[$cartItem['id']]['quantity'] @endphp
+    <a type="button" class="btn btn-light" href="{{ route('cart.operation', [ 'operation' => 'add', 'product' => $cartItem['id']]) }}">+</a>
+    </p>
+    <p><a type="button" class="btn btn-danger" href="{{ route('cart.operation', [ 'operation' => 'removeAll', 'product' => $cartItem['id']]) }}">Eliminar</a></p>
+    </div>
+    @endforeach
 </div>
 
+<div>
+
+@endisset
 @endsection
