@@ -13,21 +13,19 @@
     </ul>
   </div>
   @if (Auth::check())
-  <a class="nav-link mx-3" href="{{ route('dashboard') }}">
-    {{ Auth::user()->name }}
-    <a class="btn btn-primary" href="{{ route('user.logout') }}">x</a>
-  </a>
+    <a class="nav-link mx-3" href="{{ route('dashboard') }}">
+     {{ Auth::user()->name }}
+     <a class="btn btn-primary" href="{{ route('user.logout') }}">x</a>
+    </a>
   @else
-  <a class="nav-link mx-3" href="{{ route('login') }}">
-    Autenticación
-  </a>
+    <a class="nav-link mx-3" href="{{ route('login') }}">Autenticación</a>
   @endif
-
 
   @php
   if(session()->get('cart') && session()->get('cart', 0)->iTotalItems > 0)
   echo session()->get('cart')->iTotalItems;
   @endphp
+  
   <a href="{{ route('cart.show') }}">
     <img src="/ico/carrito.png" class="mx-3" alt="Carrito" width="20%">
   </a>
