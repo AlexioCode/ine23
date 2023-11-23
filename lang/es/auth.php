@@ -24,5 +24,8 @@ return [
     'Register' => 'Registrarse',
     'I agree to the :terms_of_service and :privacy_policy' => 'Acepto los :terms_of_service y :privacy_policy',
     'Terms of Service' => 'Términos de servicio',
-    'Privacy Policy' => 'Política de privacidad'
+    'Privacy Policy' => 'Política de privacidad',
+    'Remember me' => 'Recordarme',
+    'Log in' => 'Iniciar sesión',
+    'Forgot your password?' => '¿Ha olvidado su contraseña?'
 ];
