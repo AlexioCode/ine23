@@ -27,5 +27,9 @@ return [
     'Privacy Policy' => 'Política de privacidad',
     'Remember me' => 'Recordarme',
     'Log in' => 'Iniciar sesión',
-    'Forgot your password?' => '¿Ha olvidado su contraseña?'
+    'Forgot your password?' => '¿Ha olvidado su contraseña?',
+    'Old password' => 'Antigua contraseña',
+    'New password' => 'Nueva contraseña',
+    'Repeat password' => 'Repetir contraseña',
+    'Save' => 'Guardar cambios'
 ];

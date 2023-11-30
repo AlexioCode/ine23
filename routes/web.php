@@ -24,4 +24,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 Route::get('/addToCart/{product}', [ProductController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'show'])->name('cart.show');
 Route::get('/{operation}/{product}', [CartController::class, 'operation'])->name('cart.operation');
-Route::get('/user', [UserController::class, 'logout'])->name('user.logout');
+Route::get('/userlogout', [UserController::class, 'logout'])->name('user.logout');
+Route::get('/user', [UserController::class, 'edit'])->name('user.edit');
+Route::patch('/user', [UserController::class, 'update'])->name('user.update');

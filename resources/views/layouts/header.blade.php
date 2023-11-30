@@ -13,9 +13,9 @@
     </ul>
   </div>
   @if (Auth::check())
-    <a class="nav-link mx-3" href="{{ route('dashboard') }}">
-     {{ Auth::user()->name }}
-     <a class="btn btn-primary" href="{{ route('user.logout') }}">x</a>
+    <a class="nav-link mx-3" href="{{ route('user.edit') }}">
+      {{ Auth::user()->name }}
+    <a class="btn btn-primary" href="{{ route('user.logout') }}">x</a>
     </a>
   @else
     <a class="nav-link mx-3" href="{{ route('login') }}">Autenticación</a>
@@ -23,7 +23,7 @@
 
   @php
   if(session()->get('cart') && session()->get('cart', 0)->iTotalItems > 0)
-  echo session()->get('cart')->iTotalItems;
+    echo session()->get('cart')->iTotalItems;
   @endphp
   
   <a href="{{ route('cart.show') }}">
