@@ -31,5 +31,6 @@ return [
     'Old password' => 'Antigua contraseña',
     'New password' => 'Nueva contraseña',
     'Repeat password' => 'Repetir contraseña',
-    'Save' => 'Guardar cambios'
+    'Save' => 'Guardar cambios',
+    'Description' => 'Descripción'
 ];

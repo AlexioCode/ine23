@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\CheckRoleEditor;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('/{operation}/{product}', [CartController::class, 'operation'])->name
 Route::get('/userlogout', [UserController::class, 'logout'])->name('user.logout');
 Route::get('/user', [UserController::class, 'edit'])->name('user.edit');
 Route::patch('/user', [UserController::class, 'update'])->name('user.update');
+Route::patch('/product/{product}', [ProductController::class, 'update'])->name('product.update');
+Route::get('/product/edit/{product}', [ProductController::class, 'edit'])->name('product.edit')->middleware('role.editor');
