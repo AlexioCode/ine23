@@ -1,0 +1,4 @@
+Username  Password
+ash pikachu96
+Operador 12345678
+Administrador 87654321
